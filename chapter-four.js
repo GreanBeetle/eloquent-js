@@ -23,3 +23,11 @@ const sum = arr => {
 }
 console.log('sum of range 1, 10', sum(range(1,10)))
 console.log('sum of range sum', (range(55,99)))
+
+const reverseArray = arr => {
+  let a = []
+  for (let i = arr.length - 1; i >= 0; i -= 1) a.push(arr[i])
+  return a
+}
+console.log('range 10, 100, step 2', range(10, 100, 2))
+console.log('reverse array', reverseArray(range(10, 100, 2)))
