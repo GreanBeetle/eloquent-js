@@ -22,7 +22,7 @@ const sum = arr => {
   return sum 
 }
 console.log('sum of range 1, 10', sum(range(1,10)))
-console.log('sum of range sum', (range(55,99)))
+console.log('sum of range 55, 59', sum(range(55,99)))
 
 const reverseArray = arr => {
   let a = []
