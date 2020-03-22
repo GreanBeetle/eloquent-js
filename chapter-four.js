@@ -1,16 +1,17 @@
-
-const range = (start, end) => {
-  const number = (end - start) + 1 
+const range = (start, end, step) => {
   let arr = []
-  let count = start; 
-  for (i = 1; i <= number; i++) {
-    arr.push(count)
-    count += 1; 
-  }
+  let counter = start
+  while ( counter <= end ) {
+    arr.push(counter)
+    counter = step ? counter + step : counter + 1 
+  } 
   return arr
 }
+console.log('range 1, 10', range(1, 10))
+console.log('range 55, 99', range(55, 99))
+console.log('range 1, 10, step 2', range(1, 10, 2))
+console.log('range 847, 1046, step 8', range(847, 1046, 8))
 
-const arr = [2, 7, 19]
 const sum = arr => {
   let sum = 0
   for (let a of arr ) {
@@ -19,7 +20,5 @@ const sum = arr => {
   }
   return sum 
 }
-
-console.log('range', range(1, 10))
-console.log('sum', sum(arr))
-console.log('sum of range', sum(range(1,10)))
+// console.log('sum of range 1, 10', sum(range(1,10)))
+// console.log('sum of range sum', (range(55,99)))
