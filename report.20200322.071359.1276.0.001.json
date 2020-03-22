@@ -1,0 +1,530 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200322.071359.1276.0.001.json",
+    "dumpEventTime": "2020-03-22T07:13:59Z",
+    "dumpEventTimeStamp": "1584886439589",
+    "processId": 1276,
+    "threadId": null,
+    "cwd": "/Users/user/Desktop/eloquent-javascript",
+    "commandLine": [
+      "node",
+      "chapter-four.js"
+    ],
+    "nodejsVersion": "v13.11.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "darwin",
+    "componentVersions": {
+      "node": "13.11.0",
+      "v8": "7.9.317.25-node.29",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.40.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.11.0/node-v13.11.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.11.0/node-v13.11.0.tar.gz"
+    },
+    "osName": "Darwin",
+    "osRelease": "18.5.0",
+    "osVersion": "Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
+        "speed": 2300,
+        "user": 229620,
+        "nice": 0,
+        "sys": 167020,
+        "idle": 1803420,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
+        "speed": 2300,
+        "user": 123700,
+        "nice": 0,
+        "sys": 49640,
+        "idle": 2026200,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
+        "speed": 2300,
+        "user": 223330,
+        "nice": 0,
+        "sys": 105960,
+        "idle": 1870250,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
+        "speed": 2300,
+        "user": 113030,
+        "nice": 0,
+        "sys": 39000,
+        "idle": 2047510,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo0",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo0",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "lo0",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::1",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 1
+      },
+      {
+        "name": "en0",
+        "internal": false,
+        "mac": "f0:18:98:08:e2:26",
+        "address": "fe80::1c80:6a6e:fd64:e54a",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 6
+      },
+      {
+        "name": "en0",
+        "internal": false,
+        "mac": "f0:18:98:08:e2:26",
+        "address": "192.168.0.6",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "awdl0",
+        "internal": false,
+        "mac": "c2:74:c7:89:3e:23",
+        "address": "fe80::c074:c7ff:fe89:3e23",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 8
+      },
+      {
+        "name": "utun0",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::672f:14ff:af3c:62ee",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 12
+      }
+    ],
+    "host": "Johns-Macbook.local"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00000001001678e7",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, v8::Local<v8::String>) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x00000001000898d4",
+      "symbol": "node::OnFatalError(char const*, char const*) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x000000010018be55",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x000000010018bdff",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x00000001002a5773",
+      "symbol": "v8::internal::Heap::FatalProcessOutOfMemory(char const*) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x00000001002886c5",
+      "symbol": "v8::internal::Factory::AllocateRawFixedArray(int, v8::internal::AllocationType) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x000000010028732c",
+      "symbol": "v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::RootIndex, int, v8::internal::Object, v8::internal::AllocationType) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x0000000100390aa1",
+      "symbol": "v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedSmiElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)0> >::ConvertElementsWithCapacity(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::FixedArrayBase>, v8::internal::ElementsKind, unsigned int, unsigned int, unsigned int) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x000000010038f7a8",
+      "symbol": "v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedSmiElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)0> >::GrowCapacity(v8::internal::Handle<v8::internal::JSObject>, unsigned int) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x00000001004cb57e",
+      "symbol": "v8::internal::Runtime_GrowArrayElements(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]"
+    },
+    {
+      "pc": "0x000000010075fa19",
+      "symbol": "Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit [/usr/local/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2723885056,
+    "totalCommittedMemory": 2691341912,
+    "usedMemory": 2688608000,
+    "availableMemory": 17078584,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33328,
+        "capacity": 33040,
+        "used": 33040,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 2051936,
+        "capacity": 16758784,
+        "used": 0,
+        "available": 16758784
+      },
+      "old_space": {
+        "memorySize": 2240512,
+        "committedMemory": 1920584,
+        "capacity": 1738176,
+        "used": 1418376,
+        "available": 319800
+      },
+      "code_space": {
+        "memorySize": 430080,
+        "committedMemory": 174176,
+        "capacity": 155008,
+        "used": 155008,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 528384,
+        "committedMemory": 292384,
+        "capacity": 205280,
+        "used": 205280,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 1784307712,
+        "committedMemory": 1784307712,
+        "capacity": 1784282632,
+        "used": 1784282632,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 902512640,
+        "committedMemory": 902512640,
+        "capacity": 902510880,
+        "used": 902510880,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 1.72921,
+    "kernelCpuSeconds": 0.538933,
+    "cpuConsumptionPercent": 113.407,
+    "maxRss": 2774313992192,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 667046
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "npm_config_save_dev": "",
+    "npm_config_legacy_bundling": "",
+    "npm_config_dry_run": "",
+    "npm_config_viewer": "man",
+    "npm_config_only": "",
+    "npm_config_commit_hooks": "true",
+    "npm_config_browser": "",
+    "npm_package_gitHead": "ddc84fe28c319e9ecb30767c34f2ee513e106eef",
+    "npm_config_also": "",
+    "npm_config_rollback": "true",
+    "TERM_PROGRAM": "iTerm.app",
+    "NODE": "/usr/local/Cellar/node/13.11.0/bin/node",
+    "npm_config_usage": "",
+    "npm_config_audit": "true",
+    "INIT_CWD": "/Users/user/Desktop/eloquent-javascript",
+    "ANDROID_HOME": "/Users/user/Library/Android/sdk",
+    "npm_config_globalignorefile": "/usr/local/Cellar/node/13.11.0/etc/npmignore",
+    "SHELL": "/bin/bash",
+    "TERM": "xterm-256color",
+    "npm_config_shell": "/bin/bash",
+    "npm_config_maxsockets": "50",
+    "npm_config_init_author_url": "",
+    "npm_config_shrinkwrap": "true",
+    "npm_config_parseable": "",
+    "npm_config_metrics_registry": "https://registry.npmjs.org/",
+    "TMPDIR": "/var/folders/r8/q1lynsg91lx85pk6_lkzxk8c0000gn/T/",
+    "npm_config_timing": "",
+    "npm_config_init_license": "ISC",
+    "Apple_PubSub_Socket_Render": "/private/tmp/com.apple.launchd.KThwmsh3la/Render",
+    "npm_config_if_present": "",
+    "TERM_PROGRAM_VERSION": "3.2.7",
+    "npm_config_sign_git_tag": "",
+    "npm_config_init_author_email": "",
+    "npm_config_cache_max": "Infinity",
+    "npm_config_long": "",
+    "npm_config_local_address": "",
+    "npm_config_git_tag_version": "true",
+    "npm_config_cert": "",
+    "TERM_SESSION_ID": "w0t0p0:BC102B39-AA8E-4519-9CC7-5086E5DCB986",
+    "npm_config_registry": "https://registry.npmjs.org/",
+    "npm_config_fetch_retries": "2",
+    "npm_package_private": "true",
+    "npm_config_no_proxy": "",
+    "npm_config_versions": "",
+    "npm_config_message": "%s",
+    "npm_config_key": "",
+    "USER": "user",
+    "npm_config_globalconfig": "/usr/local/Cellar/node/13.11.0/etc/npmrc",
+    "npm_config_prefer_online": "",
+    "npm_config_logs_max": "10",
+    "npm_config_always_auth": "",
+    "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Ckq5saeKqj/Listeners",
+    "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x0",
+    "npm_execpath": "/usr/local/lib/node_modules/npm/bin/npm-cli.js",
+    "npm_config_global_style": "",
+    "npm_config_cache_lock_retries": "10",
+    "npm_config_cafile": "",
+    "npm_config_heading": "npm",
+    "npm_config_searchlimit": "20",
+    "npm_config_read_only": "",
+    "npm_config_offline": "",
+    "npm_config_fetch_retry_mintimeout": "10000",
+    "npm_config_json": "",
+    "npm_config_access": "",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"4\"],\"original\":[\"run\",\"4\"]}",
+    "PATH": "/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/user/Desktop/eloquent-javascript/node_modules/.bin:/Users/user/.fastlane/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/user/Library/Android/sdk/emulator:/Users/user/Library/Android/sdk/tools:/Users/user/Library/Android/sdk/tools/bin:/Users/user/Library/Android/sdk/platform-tools",
+    "npm_config_allow_same_version": "",
+    "npm_package_scripts_4": "node chapter-four.js",
+    "npm_config_https_proxy": "",
+    "npm_config_engine_strict": "",
+    "npm_config_description": "true",
+    "_": "/usr/local/bin/node",
+    "npm_config_userconfig": "/Users/user/.npmrc",
+    "npm_config_init_module": "/Users/user/.npm-init.js",
+    "npm_config_cidr": "",
+    "PWD": "/Users/user/Desktop/eloquent-javascript",
+    "npm_config_user": "501",
+    "npm_config_node_version": "13.11.0",
+    "npm_lifecycle_event": "4",
+    "npm_config_save": "true",
+    "npm_config_ignore_prepublish": "",
+    "npm_config_editor": "vi",
+    "npm_config_auth_type": "legacy",
+    "npm_package_name": "eloquent-js",
+    "LANG": "en_US.UTF-8",
+    "npm_config_tag": "latest",
+    "npm_config_script_shell": "",
+    "ITERM_PROFILE": "Default",
+    "npm_config_progress": "true",
+    "npm_config_global": "",
+    "npm_config_searchstaleness": "900",
+    "npm_config_optional": "true",
+    "npm_config_ham_it_up": "",
+    "XPC_FLAGS": "0x0",
+    "npm_config_save_prod": "",
+    "npm_config_force": "",
+    "npm_config_bin_links": "true",
+    "npm_config_searchopts": "",
+    "npm_config_node_gyp": "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js",
+    "npm_config_depth": "Infinity",
+    "npm_config_sso_poll_frequency": "500",
+    "npm_config_rebuild_bundle": "true",
+    "npm_package_version": "0.0.1",
+    "XPC_SERVICE_NAME": "0",
+    "npm_config_unicode": "true",
+    "COLORFGBG": "15;0",
+    "HOME": "/Users/user",
+    "SHLVL": "2",
+    "npm_config_fetch_retry_maxtimeout": "60000",
+    "npm_config_tag_version_prefix": "v",
+    "npm_config_strict_ssl": "true",
+    "npm_config_sso_type": "oauth",
+    "npm_config_scripts_prepend_node_path": "warn-only",
+    "npm_config_save_prefix": "^",
+    "npm_config_loglevel": "notice",
+    "npm_config_ca": "",
+    "npm_config_save_exact": "",
+    "npm_config_group": "20",
+    "npm_config_fetch_retry_factor": "10",
+    "npm_config_dev": "",
+    "npm_config_version": "",
+    "npm_config_prefer_offline": "",
+    "npm_config_cache_lock_stale": "60000",
+    "npm_config_otp": "",
+    "npm_config_cache_min": "10",
+    "ITERM_SESSION_ID": "w0t0p0:BC102B39-AA8E-4519-9CC7-5086E5DCB986",
+    "npm_config_searchexclude": "",
+    "npm_config_cache": "/Users/user/.npm",
+    "LOGNAME": "user",
+    "npm_lifecycle_script": "node chapter-four.js",
+    "npm_config_color": "true",
+    "npm_config_proxy": "",
+    "npm_config_package_lock": "true",
+    "npm_config_package_lock_only": "",
+    "npm_config_save_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_user_agent": "npm/6.1.0 node/v13.11.0 darwin x64",
+    "npm_config_cache_lock_wait": "10000",
+    "npm_config_production": "",
+    "npm_config_send_metrics": "",
+    "npm_config_save_bundle": "",
+    "npm_config_umask": "0022",
+    "npm_config_node_options": "",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_init_author_name": "",
+    "npm_config_git": "git",
+    "npm_config_scope": "",
+    "npm_config_unsafe_perm": "true",
+    "npm_config_tmp": "/var/folders/r8/q1lynsg91lx85pk6_lkzxk8c0000gn/T",
+    "npm_config_onload_script": "",
+    "npm_node_execpath": "/usr/local/Cellar/node/13.11.0/bin/node",
+    "npm_config_prefix": "/usr/local/Cellar/node/13.11.0",
+    "npm_config_link": "",
+    "COLORTERM": "truecolor"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 24576,
+      "hard": "unlimited"
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": 67104768
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 1418,
+      "hard": 2128
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/usr/local/bin/node",
+    "/usr/local/opt/icu4c/lib/libicui18n.64.dylib",
+    "/usr/local/opt/icu4c/lib/libicuuc.64.dylib",
+    "/usr/local/opt/icu4c/lib/libicudata.64.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/system/libcache.dylib",
+    "/usr/lib/system/libcommonCrypto.dylib",
+    "/usr/lib/system/libcompiler_rt.dylib",
+    "/usr/lib/system/libcopyfile.dylib",
+    "/usr/lib/system/libcorecrypto.dylib",
+    "/usr/lib/system/libdispatch.dylib",
+    "/usr/lib/system/libdyld.dylib",
+    "/usr/lib/system/libkeymgr.dylib",
+    "/usr/lib/system/liblaunch.dylib",
+    "/usr/lib/system/libmacho.dylib",
+    "/usr/lib/system/libquarantine.dylib",
+    "/usr/lib/system/libremovefile.dylib",
+    "/usr/lib/system/libsystem_asl.dylib",
+    "/usr/lib/system/libsystem_blocks.dylib",
+    "/usr/lib/system/libsystem_c.dylib",
+    "/usr/lib/system/libsystem_configuration.dylib",
+    "/usr/lib/system/libsystem_coreservices.dylib",
+    "/usr/lib/system/libsystem_darwin.dylib",
+    "/usr/lib/system/libsystem_dnssd.dylib",
+    "/usr/lib/system/libsystem_info.dylib",
+    "/usr/lib/system/libsystem_m.dylib",
+    "/usr/lib/system/libsystem_malloc.dylib",
+    "/usr/lib/system/libsystem_networkextension.dylib",
+    "/usr/lib/system/libsystem_notify.dylib",
+    "/usr/lib/system/libsystem_sandbox.dylib",
+    "/usr/lib/system/libsystem_secinit.dylib",
+    "/usr/lib/system/libsystem_kernel.dylib",
+    "/usr/lib/system/libsystem_platform.dylib",
+    "/usr/lib/system/libsystem_pthread.dylib",
+    "/usr/lib/system/libsystem_symptoms.dylib",
+    "/usr/lib/system/libsystem_trace.dylib",
+    "/usr/lib/system/libunwind.dylib",
+    "/usr/lib/system/libxpc.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++abi.dylib",
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/usr/lib/libicucore.A.dylib",
+    "/usr/lib/libz.1.dylib"
+  ]
+}
