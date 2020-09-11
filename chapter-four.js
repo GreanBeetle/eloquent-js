@@ -33,16 +33,24 @@ console.log('range 10, 100, step 2', range(10, 100, 2))
 console.log('reverse array', reverseArray(range(10, 100, 2)))
 
 const listArray = [1, 2, 3]
-
 const arrayToList = arr => {
   let list = {}
   for (let a of arr) {
     list.value = a 
     arr.shift()
-    console.log('arr in arrayToList', arr)
     list.rest = arr.length > 0 ? arrayToList(arr) : null 
   }
   return list 
 }
-
 console.log('array to list', arrayToList(listArray))
+
+const arrayList = { value: 1, rest: { value: 2, rest: { value: 3, rest: { value: 4, rest: { value: 5, rest: null } } } } }
+const emptyArr = []
+const listToArray = (obj, arr) => {
+  arr.push(obj.value)
+  obj = obj.rest
+  if (obj.rest === null) arr.push(obj.value)
+  else listToArray(obj, arr)
+  return arr
+}
+console.log('list to array', listToArray(arrayList, emptyArr))
