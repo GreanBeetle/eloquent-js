@@ -45,12 +45,11 @@ const arrayToList = arr => {
 console.log('array to list', arrayToList(listArray))
 
 const arrayList = { value: 1, rest: { value: 2, rest: { value: 3, rest: { value: 4, rest: { value: 5, rest: null } } } } }
-const emptyArr = []
-const listToArray = (obj, arr) => {
+const listToArray = (obj, arr = []) => {
   arr.push(obj.value)
   obj = obj.rest
   if (obj.rest === null) arr.push(obj.value)
   else listToArray(obj, arr)
   return arr
 }
-console.log('list to array', listToArray(arrayList, emptyArr))
+console.log('list to array', listToArray(arrayList))
