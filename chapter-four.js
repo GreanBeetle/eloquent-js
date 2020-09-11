@@ -16,6 +16,9 @@ console.log('range 1, 10, step 2', range(1, 10, 2))
 console.log('range 847, 1046, step 8', range(847, 1046, 8))
 console.log('range 1, 10, -2', range(1, 10, -2))
 
+console.log('************************************')
+console.log('************************************')
+
 const sum = arr => {
   let sum
   for (let a of arr) sum = a === arr[0] ? a : sum + a   
@@ -24,6 +27,9 @@ const sum = arr => {
 console.log('sum of range 1, 10', sum(range(1,10)))
 console.log('sum of range 55, 59', sum(range(55,99)))
 
+console.log('************************************')
+console.log('************************************')
+
 const reverseArray = arr => {
   let a = []
   for (let i = arr.length - 1; i >= 0; i -= 1) a.push(arr[i])
@@ -31,6 +37,9 @@ const reverseArray = arr => {
 }
 console.log('range 10, 100, step 2', range(10, 100, 2))
 console.log('reverse array', reverseArray(range(10, 100, 2)))
+
+console.log('************************************')
+console.log('************************************')
 
 const listArray = [1, 2, 3]
 const arrayToList = arr => {
@@ -44,7 +53,10 @@ const arrayToList = arr => {
 }
 console.log('array to list', arrayToList(listArray))
 
-const arrayList = { value: 1, rest: { value: 2, rest: { value: 3, rest: { value: 4, rest: { value: 5, rest: null } } } } }
+console.log('************************************')
+console.log('************************************')
+
+const arrayList = { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }
 const listToArray = (obj, arr = []) => {
   arr.push(obj.value)
   obj = obj.rest
@@ -53,3 +65,14 @@ const listToArray = (obj, arr = []) => {
   return arr
 }
 console.log('list to array', listToArray(arrayList))
+
+console.log('************************************')
+console.log('************************************')
+
+const element = 'x'
+const listToArrayWithPrepend = (list, element) => {
+  if (list.rest !== null) list = { a: element, value: list.value, rest: listToArrayWithPrepend(list.rest, element)}
+  else list = { a: element, value: list.value, rest: null }   
+  return list 
+}
+console.log('list to array with prepend', listToArrayWithPrepend(arrayList, element))
