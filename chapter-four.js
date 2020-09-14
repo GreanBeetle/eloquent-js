@@ -76,3 +76,26 @@ const listToArrayWithPrepend = (list, element) => {
   return list 
 }
 console.log('list to array with prepend', listToArrayWithPrepend(arrayList, element))
+
+console.log('************************************')
+console.log('************************************')
+
+const nthList = { value: 4, rest: { 
+    value: 8, rest: { 
+      value: 12, rest: {
+        value: 16, rest: {
+          value: 20, rest: null
+        }
+      } 
+    } 
+  } 
+}
+const nthNum = 4
+const nth = (list, num, count = 1) => {
+  let result 
+  if (count !== num) result = nth(list.rest, num, count + 1)
+  else if (count === num) result = list.value 
+  else console.log('something went wrong in the nth function')
+  return result
+}
+console.log('nth', nth(nthList, nthNum))
