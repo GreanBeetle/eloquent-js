@@ -99,3 +99,39 @@ const nth = (list, num, count = 1) => {
   return result
 }
 console.log('nth', nth(nthList, nthNum))
+
+console.log('************************************')
+console.log('************************************')
+
+var objA = { here: { is: "an" }, object: 2 }
+const deepEqual = (x, y) => {
+  const isObject = value => typeof value === 'object'
+  if (x === y) 
+    return true
+  else if ((x === null && y !== null) || (y === null && x !== null)) 
+    return false 
+  else {
+    if (isObject(x) && isObject(y)) {
+      let result = true
+      const xKeys = Object.keys(x)
+      const yKeys = Object.keys(y)
+      if (xKeys.length !== yKeys.length) return false 
+      for (let i = 0; i < xKeys.length; i++) {
+        if (!result) return false
+        const xValue = x[xKeys[i]]
+        const yValue = y[yKeys[i]]
+        if (isObject(xValue) && isObject(yValue)) result = deepEqual(xValue, yValue)
+        else result = xValue === yValue  
+      }
+      return result 
+    } else {
+      return false             
+    } 
+  }
+}
+console.log(deepEqual(null, null)) // -> true 
+console.log(deepEqual(objA, objA)) // -> true 
+console.log(deepEqual(objA, { here: 1, object: 2 })) // -> false
+console.log(deepEqual(objA, { here: { is: "an" }, object: 2 })) // -> true
+console.log(deepEqual(nthList, { value: 4, rest: { value: 8, rest: { value: 12, rest: { value: 16, rest: { value: 20, rest: null } } } } })) // -> true
+console.log(deepEqual(nthList, { value: 4, rest: { value: 8, rest: { value: 12, rest: { value: 16, rest: { value: 20, rest: 87 } } } } })) // -> false
