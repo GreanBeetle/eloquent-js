@@ -135,3 +135,4 @@ console.log(deepEqual(objA, { here: 1, object: 2 })) // -> false
 console.log(deepEqual(objA, { here: { is: "an" }, object: 2 })) // -> true
 console.log(deepEqual(nthList, { value: 4, rest: { value: 8, rest: { value: 12, rest: { value: 16, rest: { value: 20, rest: null } } } } })) // -> true
 console.log(deepEqual(nthList, { value: 4, rest: { value: 8, rest: { value: 12, rest: { value: 16, rest: { value: 20, rest: 87 } } } } })) // -> false
+
