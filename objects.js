@@ -62,10 +62,13 @@ const testObjA = {
 /** 
  * return name of player who has the highest total score (wallace has one score of 5 and one of 9, so his total is 14, ergo this function should return 'wallace')
  */
-
- const getHighScore = obj => {
-   let arr = []
-   for (let o in obj) console.log('o is', o)
-   console.log('arr', arr)
- }
-console.log('get high score', getHighScore(testObjA)) // -> 
+const getHighScore = obj => {
+  let object = {}
+  for (let k of Object.keys(obj)) {
+    const { name, score } = obj[k] 
+    if (!object[name]) object[name] = score
+    else if (object[name]) object[name] = object[name] + score
+  }
+  return Object.entries(object).sort((a, b) => b[1] - a[1])[0][0]
+}
+console.log('get high score', getHighScore(testObjA)) // -> wallace 
